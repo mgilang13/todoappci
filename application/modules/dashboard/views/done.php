@@ -23,9 +23,8 @@
                 <td><?php echo date("d F Y H:i:s", strtotime($row->Todo_created_at)); ?></td>
                 <td><?php echo date("d F Y H:i:s", strtotime($row->Todo_done_at)); ?></td> 
                 <td style="margin:10px;">
-                    <a href="#"><i title="Done" class="lnr lnr-checkmark-circle"></i></a>&nbsp;&nbsp;
                     <a href="<?php echo base_url('dashboard/edit/'.$row->Todo_id); ?>"><i title="Edit" class="lnr lnr-pencil"></i></a>&nbsp; &nbsp;
-                    <a href="#"><i title="Delete" class="delete-data lnr lnr-trash" id="<?php echo $row->Todo_id?>"></i></a></td>  
+                    <a href="#"><i title="Arsipkan" class="archive-data lnr lnr-book" id="<?php echo $row->Todo_id?>"></i></a></td>  
                 <td></td>  
             </tr>    
            <?php }

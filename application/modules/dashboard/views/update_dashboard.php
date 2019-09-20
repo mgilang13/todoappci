@@ -4,7 +4,7 @@
 
     <div class="form-group myform">
     <input type="text" name="todo_id" value="<?php echo $todos->Todo_id?>">
-		<input value=<?php echo $todos->Todo_activity; ?> name="Todo_activity" type="text" class="todo-form form-control" placeholder="WHAT WILL YOU DO?">
+		<input value=<?php echo $todos->Todo_activity; ?> name="Todo_activity" type="text" class="todo-form form-control">
         <div class="row">
             <input type="submit" value="Update" class="btn btn-success">
             <a href="<?php echo base_url("dashboard"); ?>" class="btn btn-warning btn-back">Back</a>

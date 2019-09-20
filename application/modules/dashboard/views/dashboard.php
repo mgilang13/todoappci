@@ -45,7 +45,8 @@
                 <td style="margin:10px;">
                     <a href="<?php echo base_url('dashboard/doneclick/'.$row->Todo_id)?>"><i title="Done" class="lnr lnr-checkmark-circle"></i></a>&nbsp;&nbsp;
                     <a href="<?php echo base_url('dashboard/edit/'.$row->Todo_id); ?>"><i title="Edit" class="lnr lnr-pencil"></i></a>&nbsp; &nbsp;
-                    <a href="#"><i title="Delete" class="delete-data lnr lnr-trash" id="<?php echo $row->Todo_id?>"></i></a></td>  
+                    <!-- <a href="#"><i title="Delete" class="delete-data lnr lnr-trash" id="<?php echo $row->Todo_id?>"></i></a></td>   -->
+                    <a href="#"><i title="Arsipkan" class="archive-data lnr lnr-book" id="<?php echo $row->Todo_id?>"></i></a>
                 <td></td>  
             </tr>    
            <?php }

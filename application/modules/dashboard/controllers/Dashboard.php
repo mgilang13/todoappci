@@ -12,7 +12,8 @@ class Dashboard extends CI_Controller {
 
     public function index() {
         $dataGlobal['title_page'] = 'Dashboard';
-        $dataContent['fetch_data'] = $this->dashboard_model->get_todos();
+        $id = $this->session->userdata('id');
+        $dataContent['fetch_data'] = $this->dashboard_model->get_todos($id);
 
         $this->load->view('templates/header', $dataGlobal);
         $this->load->view('dashboard', $dataContent);
@@ -20,6 +21,7 @@ class Dashboard extends CI_Controller {
     }
 
     public function insert() {
+        $data['Todo_id_user'] = $this->session->userdata('id');
         $data['Todo_activity'] = $this->input->post("Todo_activity");
         $this->dashboard_model->insert($data);
         redirect("dashboard");
@@ -66,8 +68,10 @@ class Dashboard extends CI_Controller {
     }
 
     public function show_done() {
+        $id = $this->session->userdata('id');
+
         $dataGlobal = "Tugas Selesai";
-        $dataContent['fetch_data'] = $this->dashboard_model->get_done_todos();
+        $dataContent['fetch_data'] = $this->dashboard_model->get_done_todos($id);
 
         $this->load->view("templates/header", $dataGlobal);
         $this->load->view("done", $dataContent);
@@ -75,12 +79,17 @@ class Dashboard extends CI_Controller {
     }
 
     public function show_archive() {
+        $id = $this->session->userdata('id');
         $dataGlobal = "Tugas Terarsipkan";
-        $dataContent['fetch_data'] = $this->dashboard_model->get_archive_todos();
+        $dataContent['fetch_data'] = $this->dashboard_model->get_archive_todos($id);
 
         $this->load->view("templates/header", $dataGlobal);
         $this->load->view("archive", $dataContent);
         $this->load->view("templates/footer");
+    }
+
+    public function do_archive() {
+        $this->dashboard_model->do_archive();
     }
 
 

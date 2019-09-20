@@ -8,6 +8,7 @@
 						Register Form
 					</span>
 
+					<span class="text-danger"><?php echo form_error('fullname'); ?></span>
                     <div class="wrap-input100 validate-input m-b-16">
 						<input class="input100" type="text" name="fullname" placeholder="Full Name">
 						<span class="focus-input100"></span>
@@ -16,6 +17,7 @@
 						</span>
                     </div>
                     
+					<span class="text-danger"><?php echo form_error('email'); ?></span>
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">
 						<input class="input100" type="text" name="email" placeholder="Email">
 						<span class="focus-input100"></span>
@@ -24,6 +26,7 @@
 						</span>
 					</div>
 
+					<span class="text-danger"><?php echo form_error('password'); ?></span>
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
 						<input class="input100" type="password" name="password" placeholder="Password">
 						<span class="focus-input100"></span>
@@ -33,7 +36,7 @@
                     </div>
                     
                     <div class="wrap-input100 validate-input m-b-16">
-						<input class="input100" type="password" name="nohp" placeholder="No. HP">
+						<input class="input100" type="text" name="nohp" placeholder="No. HP">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<span class="lnr lnr-smartphone"></span>
@@ -41,9 +44,14 @@
 					</div>
 
                     <!-- <div class="form-group">
-                        <?php echo $captcha // tampilkan recaptcha ?>
+                        <?php// echo $captcha // tampilkan recaptcha ?>
                     </div>  -->
-
+					
+					<!-- <div class="form-group">
+						<?php echo $image;?>
+						<input type="text" name="security_code">
+					</div> -->
+					
 					<div class="contact100-form-checkbox m-l-4">
 						<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
 						<label class="label-checkbox100" for="ckb1">

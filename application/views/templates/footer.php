@@ -24,6 +24,21 @@
             }  
         });  
     });  
-</script>  
+</script>
+<script>  
+    $(document).ready(function(){  
+        $('.archive-data').click(function(){  
+            var id = $(this).attr("id");  
+            if(confirm("Are you sure you want to archive this?"))  
+            {  
+                    window.location="<?php echo base_url(); ?>dashboard/do_archive/"+id;  
+            }  
+            else  
+            {  
+                    return false;  
+            }  
+        });  
+    });  
+</script>    
 </body>
 </html>

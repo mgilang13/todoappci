@@ -12,7 +12,7 @@
 					<span class="login100-form-title p-b-55">
 						Login
 					</span>
-
+					<span class="text-danger"><?php echo form_error('email'); ?></span>
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">
 						<input class="input100" type="text" name="email" placeholder="Email">
 						<span class="focus-input100"></span>
@@ -20,7 +20,7 @@
 							<span class="lnr lnr-envelope"></span>
 						</span>
 					</div>
-
+					<span class="text-danger"><?php echo form_error('password'); ?></span>
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
 						<input class="input100" type="password" name="password" placeholder="Password">
 						<span class="focus-input100"></span>

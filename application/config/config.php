@@ -1,6 +1,10 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+date_default_timezone_set('Asia/Jakarta');
 
+// $config['recaptcha_site_key'] = '6LdpOrkUAAAAAKtxOyCe0C34nmSVca-NTdKwhSDp';
+// $config['recaptcha_secret_key'] = '6LdpOrkUAAAAACIKJEj_LynAEHyJPMP4rx5kVAkE';
+// $config['recaptcha_lang'] = 'en';
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
