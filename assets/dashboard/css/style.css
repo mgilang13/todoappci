@@ -1,0 +1,29 @@
+.spacer {
+	margin: 30px;
+}
+
+form {
+	margin: 10px auto;
+}
+.myform {
+	padding: 10px;
+	border: 1px solid darkgrey;
+}
+
+.myform input.todo-form {
+	border: 1px solid darkgrey;
+}
+.myform input {
+	padding: 10px;
+	margin: 10px;
+}
+
+.form-update {
+	margin: auto;
+}
+
+.btn-back {
+	color: white;
+	height: 42px;
+	margin-top: 10px;
+}
